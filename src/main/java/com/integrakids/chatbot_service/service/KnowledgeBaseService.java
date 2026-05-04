@@ -411,6 +411,355 @@ new Entry(
     "via API REST.",
     "como o chatbot funciona", "chatbot tecnico", "como o chat foi feito",
     "tecnologia do chatbot", "microsservico chatbot"
+),
+
+// ── Tratativa de Ofensas ─────────────────────────────────────────
+new Entry(
+    "Entendo que as vezes as coisas podem ser frustrantes,\n" +
+    "mas estou aqui para te ajudar da melhor forma possivel!\n" +
+    "Tem algo que eu possa fazer por voce?",
+    "idiota", "burro", "inutil", "lixo", "pessimo", "horrivel",
+    "nao presta", "que merda", "merda", "droga", "que bosta",
+    "bosta", "otario", "estupido", "ridiculo", "uma bosta"
+),
+
+new Entry(
+    "Opa! Vamos manter a conversa por aqui, tudo bem?\n" +
+    "Estou aqui para ajudar com o IntegraKids. O que voce precisa?",
+    "cala boca", "cale boca", "vai se", "seu lixo", "chatbot lixo",
+    "odio voce", "te odeio", "horrivel isso", "que horror"
+),
+
+// ── FAQ: Onde fica cada coisa ────────────────────────────────────
+new Entry(
+    "O chatbot fica no canto inferior direito da tela principal,\n" +
+    "representado por um icone de mensagem. Clique nele para abrir\n" +
+    "e digitar sua duvida!",
+    "onde fica o chat", "onde fica o chatbot", "como acessar o chat",
+    "como abrir o chat", "onde esta o assistente", "onde fica o assistente"
+),
+
+new Entry(
+    "O painel de acompanhamento fica na tela inicial apos o login.\n" +
+    "Nele voce encontra os relatorios de desempenho, atividades\n" +
+    "realizadas e a evolucao da crianca.",
+    "onde fica o painel", "onde fica o relatorio", "onde ver progresso",
+    "onde acompanho", "onde ver desempenho", "onde fica o dashboard"
+),
+
+new Entry(
+    "Os jogos ficam na tela de atividades, acessivel pelo menu principal.\n" +
+    "Selecione o perfil da crianca e escolha o jogo desejado para comecar.",
+    "onde ficam os jogos", "onde estao os jogos", "como achar os jogos",
+    "onde acho os jogos", "onde fica a tela de jogos", "menu de jogos"
+),
+
+new Entry(
+    "O cadastro e feito na tela inicial do app, antes do login.\n" +
+    "Toque em 'Cadastrar' e preencha os dados solicitados.",
+    "onde faco cadastro", "onde e o cadastro", "onde criar conta",
+    "onde me cadastro", "tela de cadastro", "onde fica o cadastro"
+),
+
+new Entry(
+    "A tela de login e a primeira tela apos abrir o app.\n" +
+    "Insira seu e-mail e senha para acessar a plataforma.",
+    "onde fica o login", "onde e o login", "onde entro", "tela de login",
+    "como entrar no app", "onde coloco minha senha"
+),
+
+new Entry(
+    "As configuracoes ficam no menu lateral ou no icone de engrenagem\n" +
+    "no canto superior da tela. Por la voce pode ajustar preferencias,\n" +
+    "acessibilidade e dados da conta.",
+    "onde fica configuracao", "onde ficam as configuracoes", "como configurar",
+    "onde ajusto", "tela de configuracao", "icone de configuracao",
+    "onde fica o menu"
+),
+
+new Entry(
+    "O perfil do usuario fica acessivel pelo menu principal.\n" +
+    "Nele voce pode visualizar e editar suas informacoes pessoais\n" +
+    "e gerenciar os perfis das criancas cadastradas.",
+    "onde fica o perfil", "onde edito meu perfil", "como ver meu perfil",
+    "tela de perfil", "onde fica meu usuario", "onde edito minha conta"
+),
+
+new Entry(
+    "A opcao de recuperar senha fica na tela de login.\n" +
+    "Clique em 'Esqueci minha senha' e siga as instrucoes enviadas\n" +
+    "para o seu e-mail.",
+    "onde recupero senha", "onde redefino senha", "onde fica esqueci senha",
+    "como recuperar senha", "nao consigo entrar", "esqueci minha senha"
+),
+
+new Entry(
+    "A secao 'Sobre' do app fica no menu lateral.\n" +
+    "Nela voce encontra informacoes sobre o projeto Jornada da Inclusao,\n" +
+    "sua missao e a equipe desenvolvedora.",
+    "onde fica sobre", "onde fica informacoes do app", "quem fez o app",
+    "sobre o app", "tela sobre", "informacoes do projeto"
+),
+
+new Entry(
+    "O suporte pode ser acessado pelo chatbot ou pelo menu principal,\n" +
+    "na opcao 'Fale Conosco'. Para problemas tecnicos, descreva\n" +
+    "o erro encontrado para que possamos ajudar.",
+    "onde fica o suporte", "onde falo com suporte", "como acessar suporte",
+    "onde e fale conosco", "onde reporto problema", "onde fica ajuda"
+),
+
+// ── FAQ: Como Jogar - Jogos ───────────────────────────────────────
+new Entry(
+    "O IntegraKids possui 4 jogos educativos:\n" +
+    "1. Jogo da Memoria - encontrar pares de cartas\n" +
+    "2. Jogo dos Numeros - ordenar numeros em ordem crescente\n" +
+    "3. Jogo das Letras - identificar e listar as vogais\n" +
+    "4. Jogo das Cores - associar a cor correta a cada animal\n\n" +
+    "Qual jogo voce gostaria de saber mais?",
+    "quais jogos tem", "que jogos existem", "listar jogos",
+    "quais sao os jogos", "me fala os jogos", "jogos disponiveis",
+    "quantos jogos tem"
+),
+
+new Entry(
+    "No Jogo da Memoria, cartas sao exibidas viradas para baixo na tela.\n" +
+    "O objetivo e encontrar todos os pares!\n\n" +
+    "Como jogar:\n" +
+    "1. Toque em uma carta para revela-la\n" +
+    "2. Toque em outra carta tentando encontrar o par\n" +
+    "3. Se as cartas forem iguais, o par e encontrado!\n" +
+    "4. Se forem diferentes, as cartas viram novamente\n" +
+    "5. Encontre todos os pares para completar o jogo!",
+    "jogo da memoria", "como jogar memoria", "como funciona o jogo da memoria",
+    "jogo de pares", "encontrar pares", "cartas", "jogo das cartas",
+    "instrucoes jogo da memoria"
+),
+
+new Entry(
+    "No Jogo dos Numeros, uma sequencia de numeros embaralhados\n" +
+    "e exibida na tela. O objetivo e coloca-los em ordem crescente!\n\n" +
+    "Como jogar:\n" +
+    "1. Observe os numeros disponiveis na tela\n" +
+    "2. Toque no menor numero primeiro\n" +
+    "3. Continue selecionando do menor para o maior\n" +
+    "4. Complete a sequencia em ordem crescente para vencer!",
+    "jogo dos numeros", "jogo de numeros", "como jogar numeros",
+    "como funciona o jogo dos numeros", "ordem crescente",
+    "ordenar numeros", "instrucoes jogo dos numeros"
+),
+
+new Entry(
+    "No Jogo das Letras, o objetivo e identificar e selecionar\n" +
+    "todas as vogais que aparecem na tela!\n\n" +
+    "Como jogar:\n" +
+    "1. Varias letras serao exibidas na tela\n" +
+    "2. Toque apenas nas vogais: A, E, I, O, U\n" +
+    "3. Evite tocar nas consoantes\n" +
+    "4. Encontre todas as vogais para completar o jogo!",
+    "jogo das letras", "como jogar letras", "como funciona o jogo das letras",
+    "vogais", "listar vogais", "identificar vogais", "jogo de alfabetizacao",
+    "instrucoes jogo das letras"
+),
+
+new Entry(
+    "No Jogo das Cores, cada animal aparece na tela e voce\n" +
+    "deve associar a cor correta a ele!\n\n" +
+    "Como jogar:\n" +
+    "1. Um animal sera exibido na tela\n" +
+    "2. Escolha a cor que corresponde a esse animal\n" +
+    "3. Acertou? Proximo animal!\n" +
+    "4. Associe a cor certa a todos os animais para vencer!",
+    "jogo das cores", "como jogar cores", "como funciona o jogo das cores",
+    "associar cores", "cor do animal", "animais e cores",
+    "instrucoes jogo das cores"
+),
+// ── FAQ: Disponibilidade iOS ─────────────────────────────────────
+new Entry(
+    "Por enquanto o IntegraKids esta disponivel apenas para Android.\n" +
+    "O app foi desenvolvido com Android Studio e Java nativo,\n" +
+    "o que exigiria uma reescrita completa para funcionar no iOS.\n\n" +
+    "O desenvolvimento para iOS nao esta nos planos atuais,\n" +
+    "mas voce pode usar a plataforma normalmente pelo navegador\n" +
+    "no seu iPhone ou iPad acessando a versao web!",
+    "ios", "iphone", "ipad", "apple", "app store", "nao tem pra iphone",
+    "funciona no iphone", "disponivel para ios", "quando vai ter pra ios",
+    "por que nao tem pra ios", "nao funciona no iphone"
+),
+
+// ── FAQ: Integrantes do Projeto ──────────────────────────────────
+new Entry(
+    "O projeto Jornada da Inclusao foi desenvolvido por 5 estudantes\n" +
+    "do curso de Desenvolvimento de Software Multiplataforma da Fatec:\n\n" +
+    "- Luciana Guedes de Araujo\n" +
+    "- Manuela Tenorio da Silva\n" +
+    "- Marcos Vinicius de Oliveira\n" +
+    "- Pedro Henrique Santos Bernardo\n" +
+    "- Renato Winicius de Lima Jacob\n\n" +
+    "O projeto foi orientado pelo Prof. Edson Saraiva de Almeida\n" +
+    "na disciplina de Laboratorio de Desenvolvimento Web.",
+    "integrantes", "quem desenvolveu", "quem criou", "equipe",
+    "time", "desenvolvedores", "quem fez o app", "membros do projeto",
+    "quem sao os criadores", "autores", "professor", "orientador",
+    "quem orientou", "fatec", "curso"
+),
+
+// ── FAQ: Acessibilidade - Funcionalidades ────────────────────────
+new Entry(
+    "O IntegraKids conta com 4 recursos de acessibilidade:\n" +
+    "1. Tema - altera as cores da interface\n" +
+    "2. Modo Daltonismo - auxilia quem tem dificuldade com cores\n" +
+    "3. Tamanho de Texto - amplia as letras da plataforma\n" +
+    "4. Som - feedback sonoro nos jogos\n\n" +
+    "Todos podem ser ajustados na tela de Configuracoes!",
+    "acessibilidade", "recursos de acessibilidade", "funcoes de acessibilidade",
+    "configuracoes de acessibilidade", "quais recursos tem",
+    "como tornar acessivel", "opcoes de acessibilidade"
+),
+
+new Entry(
+    "O recurso de Tema permite alterar as cores da interface\n" +
+    "de acordo com sua preferencia. Ha 3 opcoes disponiveis:\n\n" +
+    "- Claro: fundo branco com textos escuros\n" +
+    "- Escuro: fundo escuro com textos claros, ideal para\n" +
+    "  ambientes com pouca luz ou quem tem sensibilidade visual\n" +
+    "- Sistema: segue automaticamente o tema configurado\n" +
+    "  no seu dispositivo\n\n" +
+    "Para alterar, acesse Configuracoes e escolha o tema desejado.",
+    "tema", "tema claro", "tema escuro", "modo escuro", "dark mode",
+    "modo claro", "light mode", "tema do sistema", "mudar tema",
+    "alterar tema", "como mudar o tema", "cores da interface"
+),
+
+new Entry(
+    "O modo Daltonismo foi desenvolvido para auxiliar pessoas com\n" +
+    "dificuldade na percepcao de certas cores. O app oferece suporte para:\n\n" +
+    "- Protanomalia: dificuldade na percepcao da cor vermelha\n" +
+    "- Deuteranomalia: dificuldade na percepcao da cor verde\n\n" +
+    "Ao ativar o modo correspondente, a interface adapta sua\n" +
+    "paleta de cores para facilitar a visualizacao do conteudo.\n\n" +
+    "Para ativar, acesse Configuracoes e selecione o modo de daltonismo.",
+    "daltonismo", "daltonico", "daltonica", "protanomalia", "deuteranomalia",
+    "dificuldade com cores", "modo daltonismo", "como ativar daltonismo",
+    "nao consigo ver as cores", "cores dificeis de ver"
+),
+
+new Entry(
+    "O recurso de Tamanho de Texto foi pensado para quem tem\n" +
+    "dificuldade com letras pequenas, como criancas em fase de\n" +
+    "alfabetizacao ou pessoas com baixa visao.\n\n" +
+    "Ao ativar, os textos da plataforma sao ampliados para\n" +
+    "facilitar a leitura em todas as telas do app.\n\n" +
+    "Para ativar, acesse Configuracoes e habilite o Tamanho de Texto.",
+    "tamanho de texto", "texto maior", "aumentar letra", "aumentar fonte",
+    "letra grande", "fonte maior", "dificuldade pra ler", "texto pequeno",
+    "nao consigo ler", "como aumentar o texto", "visao", "baixa visao"
+),
+
+new Entry(
+    "O recurso de Som funciona como feedback sonoro durante os jogos.\n" +
+    "Ele emite sons para indicar acertos e erros, ajudando a crianca\n" +
+    "a compreender o resultado de cada acao sem depender apenas\n" +
+    "do feedback visual.\n\n" +
+    "Esse recurso e especialmente util para criancas com dificuldade\n" +
+    "de leitura ou que respondem melhor a estimulos auditivos.\n\n" +
+    "Para ativar, acesse Configuracoes e habilite o recurso de Som.",
+    "som", "audio", "feedback sonoro", "som nos jogos", "sons do jogo",
+    "ativar som", "como ativar o som", "sons de acerto", "sons de erro",
+    "estimulo auditivo", "feedback de audio", "recurso de som"
+), // ── FAQ: Aba de Perfil ───────────────────────────────────────────
+new Entry(
+    "A aba de Perfil concentra todas as opcoes relacionadas\n" +
+    "a sua conta e aos avatares das criancas. Ela possui 6 opcoes:\n\n" +
+    "1. Editar dados do usuario - altere nome, email ou senha\n" +
+    "2. Criar avatar - cadastre um perfil para a crianca\n" +
+    "3. Editar avatar - altere os dados do perfil da crianca\n" +
+    "4. Ver resultados - acompanhe o desempenho nos jogos\n" +
+    "5. Trocar jogador - alterne entre os avatares cadastrados\n" +
+    "6. Logout - saia da sua conta\n\n" +
+    "Acesse pelo menu principal tocando no icone de perfil.",
+    "aba de perfil", "tela de perfil", "o que tem no perfil",
+    "opcoes do perfil", "menu de perfil", "o que faz o perfil",
+    "como usar o perfil", "perfil"
+),
+
+new Entry(
+    "Na opcao de editar dados do usuario voce pode atualizar\n" +
+    "as seguintes informacoes da sua conta:\n\n" +
+    "- Nome\n" +
+    "- E-mail\n" +
+    "- Senha\n\n" +
+    "Para alterar, acesse Perfil, toque em 'Editar dados'\n" +
+    "e atualize as informacoes desejadas.",
+    "editar dados", "mudar dados", "alterar nome", "alterar email",
+    "alterar senha", "mudar nome", "mudar email", "mudar senha",
+    "atualizar dados", "editar conta", "como mudar meus dados"
+),
+
+new Entry(
+    "O avatar e o perfil da crianca dentro do app!\n" +
+    "Para criar um avatar, acesse Perfil e toque em 'Criar avatar'.\n\n" +
+    "Durante a criacao voce define:\n" +
+    "- O boneco que representa a crianca\n" +
+    "- O nome do avatar\n" +
+    "- A data de nascimento\n" +
+    "- O genero\n\n" +
+    "Cada responsavel pode ter mais de um avatar cadastrado,\n" +
+    "um para cada crianca!",
+    "criar avatar", "cadastrar avatar", "avatar da crianca",
+    "como criar perfil da crianca", "como cadastrar crianca",
+    "adicionar crianca", "novo avatar", "criar perfil crianca"
+),
+
+new Entry(
+    "Para editar um avatar ja cadastrado, acesse Perfil\n" +
+    "e toque em 'Editar avatar'. Voce pode alterar:\n\n" +
+    "- O boneco do avatar\n" +
+    "- O nome da crianca\n" +
+    "- A data de nascimento\n" +
+    "- O genero\n\n" +
+    "As alteracoes sao salvas automaticamente!",
+    "editar avatar", "mudar avatar", "alterar avatar",
+    "mudar dados da crianca", "editar perfil da crianca",
+    "alterar nome da crianca", "mudar boneco", "editar boneco"
+),
+
+new Entry(
+    "Na opcao de resultados voce acompanha o desempenho\n" +
+    "da crianca nos jogos. Para cada atividade sao exibidos:\n\n" +
+    "- Tempo: quanto tempo levou para concluir\n" +
+    "- Tentativas: quantas vezes tentou\n" +
+    "- Acertos: quantidade de respostas corretas\n" +
+    "- Erros: quantidade de respostas incorretas\n\n" +
+    "Acesse Perfil e toque em 'Ver resultados' para acompanhar\n" +
+    "a evolucao da crianca!",
+    "resultados", "ver resultados", "desempenho", "historico",
+    "acertos e erros", "tempo de jogo", "tentativas",
+    "como ver o desempenho", "relatorio de jogos", "evolucao da crianca",
+    "estatisticas", "como a crianca foi"
+),
+
+new Entry(
+    "Caso voce tenha mais de um avatar cadastrado, e possivel\n" +
+    "alternar entre eles sem precisar sair da conta!\n\n" +
+    "Para trocar o jogador ativo, acesse Perfil e toque em\n" +
+    "'Trocar jogador'. Selecione o avatar desejado e\n" +
+    "os jogos passarao a registrar o desempenho desse perfil.",
+    "trocar jogador", "mudar jogador", "alternar avatar",
+    "trocar avatar", "mudar crianca", "outro perfil",
+    "como trocar de crianca", "selecionar jogador",
+    "como alternar entre criancas", "trocar perfil ativo"
+),
+
+new Entry(
+    "Para sair da sua conta com seguranca, acesse Perfil\n" +
+    "e toque em 'Logout' ao final da lista de opcoes.\n\n" +
+    "Voce sera redirecionado para a tela de login.\n" +
+    "Seus dados e o progresso das criancas ficam salvos\n" +
+    "para o proximo acesso!",
+    "logout", "sair", "sair da conta", "deslogar", "desconectar",
+    "como sair", "como fazer logout", "encerrar sessao",
+    "fechar conta", "sair do app"
 )
     );
 
