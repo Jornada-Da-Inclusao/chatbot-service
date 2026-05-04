@@ -186,6 +186,231 @@ new Entry(
 new Entry(
     TRIGGER_LEAD,
     "contato", "falar com", "especialista", "agendar", "diagnostico", "suporte"
+),
+
+// ── Cortesia / Confirmações ──────────────────────────────────────
+new Entry(
+    "De nada! Fico feliz em poder ajudar. Se tiver mais alguma duvida,\n" +
+    "e so perguntar!",
+    "obrigado", "obrigada", "valeu", "agradeço", "agradeco", "grato", "grata"
+),
+
+new Entry(
+    "Otimo! Se precisar de mais alguma coisa, estou aqui para ajudar.",
+    "ok", "okay", "certo", "entendido", "entendi", "compreendi",
+    "compreendido", "ta bom", "ta certo", "beleza", "blz"
+),
+
+new Entry(
+    "Fico feliz que tenha gostado! Posso ajudar com mais alguma coisa?",
+    "legal", "otimo", "massa", "show", "bacana", "incrivel", "top",
+    "perfeito", "excelente", "muito bom", "que bom", "que otimo"
+),
+
+new Entry(
+    "Sem problemas! Estou aqui sempre que precisar.",
+    "tudo bem", "tudo certo", "ta", "ate mais", "tchau", "ate logo",
+    "por enquanto e so", "e so isso", "foi isso"
+),
+
+// ── FAQ: Jogos e Atividades ──────────────────────────────────────
+new Entry(
+    "O app conta com jogos educativos interativos voltados para\n" +
+    "alfabetizacao e reconhecimento de numeros.\n" +
+    "Cada jogo e adaptado ao nivel da crianca e estimula o aprendizado\n" +
+    "de forma ludica e divertida.",
+    "jogos", "jogo", "atividades", "que jogos tem", "quais jogos",
+    "que atividades tem", "como funcionam os jogos", "como funciona o jogo"
+),
+
+new Entry(
+    "Os jogos de alfabetizacao ajudam a crianca a reconhecer letras,\n" +
+    "formar palavras e desenvolver a leitura de maneira interativa.\n" +
+    "Sao pensados para criancas de 4 a 8 anos em fase de alfabetizacao.",
+    "jogo de alfabetizacao", "alfabetizacao", "letras", "palavras",
+    "aprender a ler", "aprender letras", "jogo de letras"
+),
+
+new Entry(
+    "Os jogos de numeros ajudam a crianca a identificar, contar\n" +
+    "e compreender os numeros de forma visual e divertida,\n" +
+    "estimulando o raciocinio logico desde cedo.",
+    "jogo de numero", "numeros", "contar", "matematica", "jogo de matematica",
+    "identificar numeros", "aprender numeros"
+),
+
+new Entry(
+    "Antes de iniciar cada jogo, o app exibe uma descricao com\n" +
+    "o objetivo da atividade e as instrucoes de como jogar.\n" +
+    "Assim a crianca — e o responsavel — sabem o que esperar.",
+    "como jogar", "instrucoes", "instrucao do jogo", "descricao do jogo",
+    "como funciona a atividade", "regras do jogo"
+),
+
+new Entry(
+    "O app registra o desempenho da crianca em cada atividade,\n" +
+    "permitindo acompanhar a evolucao, identificar pontos de melhoria\n" +
+    "e celebrar o progresso ao longo do tempo.",
+    "pontuacao", "pontos", "resultado", "resultado do jogo",
+    "desempenho no jogo", "historico de jogos", "evolucao nos jogos"
+),
+
+// ── FAQ: App Mobile ──────────────────────────────────────────────
+new Entry(
+    "O app IntegraKids está disponivel apenas para dispositivos Android.\n" +
+    "Ele foi desenvolvido com Android Studio e Java, garantindo\n" +
+    "boa compatibilidade e desempenho em smartphones e tablets.",
+    "android", "celular", "smartphone", "tablet", "dispositivo",
+    "disponivel para android", "funciona no celular"
+),
+
+new Entry(
+    "O app possui versao web (acessivel pelo navegador) e versao mobile\n" +
+    "para Android. Ambas se conectam ao mesmo back-end e oferecem\n" +
+    "uma experiencia integrada.",
+    "versao web", "versao mobile", "diferenca entre web e mobile",
+    "tem versao web", "tem versao mobile", "navegador", "site"
+),
+
+new Entry(
+    "Para usar o app mobile, basta instala-lo no seu dispositivo Android,\n" +
+    "criar uma conta ou fazer login, e comecar as atividades.\n" +
+    "O sistema carrega automaticamente ao abrir.",
+    "como instalar", "instalar o app", "baixar o app", "download",
+    "como baixar", "como usar o app"
+),
+
+// ── FAQ: Projeto Jornada da Inclusao ────────────────────────────
+new Entry(
+    "O projeto Jornada da Inclusao foi desenvolvido por estudantes\n" +
+    "da Fatec com o objetivo de apoiar criancas com dificuldades\n" +
+    "de inclusao escolar, promovendo educacao de qualidade e acessivel.",
+    "jornada da inclusao", "sobre o projeto", "quem fez", "quem criou",
+    "desenvolvedores", "equipe", "projeto integrador", "fatec"
+),
+
+new Entry(
+    "O projeto contribui para os Objetivos de Desenvolvimento Sustentavel\n" +
+    "da ONU: ODS 4 (Educacao de Qualidade) e ODS 10 (Reducao das\n" +
+    "Desigualdades), promovendo uma educacao inclusiva e equitativa.",
+    "ods", "objetivo de desenvolvimento", "sustentavel", "onu",
+    "impacto social", "educacao inclusiva"
+),
+
+// ── FAQ: Saudacoes ───────────────────────────────────────────────
+new Entry(
+    "Ola! Seja bem-vindo ao IntegraKids!\n" +
+    "Posso te ajudar com duvidas sobre a plataforma, jogos, cadastro\n" +
+    "e muito mais. O que voce gostaria de saber?",
+    "oi", "ola", "boa tarde", "bom dia", "boa noite", "oi tudo bem",
+    "ola tudo bem", "hey", "ei", "hello", "salve"
+),
+
+new Entry(
+    "Estou bem, obrigado por perguntar! E voce?\n" +
+    "Posso te ajudar com algo sobre o IntegraKids?",
+    "tudo bem voce", "como voce esta", "como vai", "tudo bem com voce"
+), 
+
+// ── FAQ: Tecnologias e Arquitetura ───────────────────────────────
+new Entry(
+    "A plataforma utiliza a arquitetura MVC:\n" +
+    "- Web: React (frontend) + Spring Boot (backend)\n" +
+    "- Mobile: Android nativo com Java\n" +
+    "- Banco de dados: MySQL\n" +
+    "As camadas se comunicam por meio de APIs RESTful.",
+    "tecnologia", "tecnologias", "como foi feito", "arquitetura",
+    "mvc", "como funciona por dentro", "stack", "linguagem"
+),
+
+new Entry(
+    "O frontend web foi desenvolvido com React e hospedado no Firebase.\n" +
+    "O app mobile foi desenvolvido em Android com Java nativo,\n" +
+    "usando o Android Studio como ambiente de desenvolvimento.",
+    "frontend", "front end", "react", "android studio", "firebase",
+    "hospedagem frontend", "onde fica o frontend"
+),
+
+new Entry(
+    "O backend foi desenvolvido com Spring Boot (Java) e hospedado no Render.\n" +
+    "Ele expoe APIs RESTful consumidas tanto pelo app web quanto pelo mobile.",
+    "backend", "back end", "spring boot", "render", "api", "api rest",
+    "restful", "onde fica o backend", "hospedagem backend"
+),
+
+new Entry(
+    "O banco de dados utilizado é o MySQL, responsavel por armazenar\n" +
+    "informacoes de usuarios, dados das avaliacoes e resultados dos testes.",
+    "banco de dados", "mysql", "dados armazenados", "onde ficam os dados",
+    "persistencia", "armazenamento"
+),
+
+new Entry(
+    "O projeto utiliza arquitetura de microsservicos.\n" +
+    "O RabbitMQ e usado como mensageria para coordenar os microsservicos\n" +
+    "de confirmacao de e-mail e redefinicao de senha.",
+    "microsservico", "microsservicos", "rabbitmq", "mensageria",
+    "confirmacao de email", "redefinir senha", "email confirmacao"
+),
+
+// ── FAQ: Metodologia de Desenvolvimento ──────────────────────────
+new Entry(
+    "O projeto foi desenvolvido com a metodologia Scrum,\n" +
+    "dividido em sprints de duas semanas com tarefas designadas\n" +
+    "a cada membro da equipe.",
+    "metodologia", "scrum", "sprint", "como foi desenvolvido",
+    "processo de desenvolvimento", "gestao do projeto"
+),
+
+new Entry(
+    "As tarefas foram organizadas em cartoes no estilo Kanban.\n" +
+    "Ao final de cada sprint, cada membro apresenta o progresso\n" +
+    "e tarefas nao finalizadas sao realocadas para o proximo ciclo.",
+    "kanban", "tarefas", "organizacao das tarefas", "cartoes",
+    "scrum master", "sprint review"
+),
+
+new Entry(
+    "O codigo-fonte e versionado no GitHub, com uma branch dedicada\n" +
+    "ao deploy e branches separadas para desenvolvimento de cada recurso.\n" +
+    "O repositorio esta sob a conta organizacional do projeto.",
+    "github", "repositorio", "versionamento", "git", "branch",
+    "codigo fonte", "controle de versao"
+),
+
+// ── FAQ: Requisitos e Funcionalidades ────────────────────────────
+new Entry(
+    "O product backlog do projeto inclui tres requisitos principais:\n" +
+    "1. Chatbot para duvidas dos responsaveis\n" +
+    "2. Progressao de niveis nos jogos\n" +
+    "3. Ferramentas de acessibilidade para as criancas",
+    "requisitos", "funcionalidades", "product backlog", "backlog",
+    "o que o app tem", "o que foi planejado", "o que vai ter"
+),
+
+new Entry(
+    "Sim! A progressao de niveis e um dos requisitos prioritarios da plataforma.\n" +
+    "O objetivo e que a crianca avance gradualmente nos jogos conforme\n" +
+    "demonstra evolucao no aprendizado.",
+    "progressao", "nivel", "niveis", "progressao de nivel",
+    "crianca progride", "dificuldade progressiva", "avanca de nivel"
+),
+
+new Entry(
+    "A plataforma planeja oferecer ferramentas de acessibilidade\n" +
+    "para facilitar ou possibilitar o uso por criancas com necessidades especiais,\n" +
+    "sendo este um dos requisitos de alta prioridade do projeto.",
+    "ferramenta de acessibilidade", "recurso de acessibilidade",
+    "necessidades especiais", "inclusao", "acessibilidade para criancas"
+),
+
+// ── FAQ: Sobre o Chatbot (contexto tecnico) ───────────────────────
+new Entry(
+    "O chatbot é um microsservico independente desenvolvido em Java com Spring Boot,\n" +
+    "hospedado no Render. Ele e consumido tanto pelo frontend web quanto pelo mobile\n" +
+    "via API REST.",
+    "como o chatbot funciona", "chatbot tecnico", "como o chat foi feito",
+    "tecnologia do chatbot", "microsservico chatbot"
 )
     );
 
