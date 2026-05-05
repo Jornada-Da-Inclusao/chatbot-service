@@ -9,8 +9,8 @@ public class Message {
     public final Role role;
     public final String text;
     public final List<QuickAction> quickActions;
-    public final BotEmotion emotion;              // ← adicionar
-
+    public final BotEmotion emotion;              
+    
     // construtor sem quickActions (mensagem do usuário)
     public Message(Role role, String text) {
         this.role         = role;
