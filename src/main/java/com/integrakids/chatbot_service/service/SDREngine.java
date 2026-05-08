@@ -61,7 +61,8 @@ public class SDREngine {
                                                         "Ja temos seus dados, " + lead.nome
                                                                         + "! Nosso especialista liga em breve.",
                                                         ConversationPhase.LEAD_CAPTURED,
-                                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.CHAD);
+                                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null,
+                                                        BotEmotion.CHAD);
                                 }
                                 return new SDRResponse(
                                                 "Otimo! Para agendar um diagnostico gratuito, qual e o seu nome completo?",
@@ -99,7 +100,8 @@ public class SDREngine {
                                                         "Perfeito, " + lead.nome
                                                                         + "! Nosso especialista liga em breve.",
                                                         ConversationPhase.LEAD_CAPTURED,
-                                                        QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS,null,BotEmotion.EXCITED);
+                                                        QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS, null,
+                                                        BotEmotion.EXCITED);
                                 }
                                 return new SDRResponse(
                                                 "Perfeito! Qual e o seu nome completo?",
@@ -110,7 +112,7 @@ public class SDREngine {
                                                 "Claro! Sobre o que gostaria de saber mais?\n" +
                                                                 "Posso ajudar com o app, atividades, acessibilidade ou suporte.",
                                                 ConversationPhase.LEAD_CAPTURED,
-                                                QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS,null, BotEmotion.HAPPY);
+                                                QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.HAPPY);
                         }
                         return new SDRResponse(
                                         "Otimo! Para te orientar melhor: voce e pai, professor ou profissional de saude?",
@@ -203,7 +205,7 @@ public class SDREngine {
                                 ? ConversationPhase.LEAD_CAPTURED
                                 : ConversationPhase.EXPLORING;
                 return new SDRResponse(
-                                "Me desculpe, mas acho que não compreendi o que você deseja.\n\nMe conta mais sobre o que voce precisa!\n\n" ,          
+                                "Me desculpe, mas acho que não compreendi o que você deseja.\n\nMe conta mais sobre o que voce precisa!\n\n",
                                 next,
                                 QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.CONFUSED);
         }
@@ -211,24 +213,42 @@ public class SDREngine {
         // ── Resolve QuickActions pelo tema da pergunta ───────────────────
         private static List<QuickAction> resolveQuickActions(String lower) {
 
-                // Jogos e atividades
-                if (lower.matches(".*(jogo|memoria|numero|letra|cor|atividade|como jogar|instrucao|vogal|par de carta|ordem crescente).*"))
+                // Jogos específicos primeiro — evita repetir a listagem geral
+                if (lower.matches(".*(jogo da memoria|como jogar memoria|jogo de pares|encontrar pares|cartas).*"))
+                        return QuickActionsConfig.GAMES_ACTIONS;
+
+                if (lower.matches(".*(jogo dos numeros|jogo de numeros|ordem crescente|ordenar numeros).*"))
+                        return QuickActionsConfig.GAMES_ACTIONS;
+
+                if (lower.matches(".*(jogo das letras|como jogar letras|vogais|identificar vogais).*"))
+                        return QuickActionsConfig.GAMES_ACTIONS;
+
+                if (lower.matches(".*(jogo das cores|como jogar cores|cor do animal|associar cores).*"))
+                        return QuickActionsConfig.GAMES_ACTIONS;
+
+                // Jogos - visão geral só se não for específico
+                if (lower.matches(
+                                ".*(quais jogos|que jogos|listar jogos|quantos jogos|jogos disponiveis|me fala os jogos|atividades).*"))
                         return QuickActionsConfig.GAMES_ACTIONS;
 
                 // Acessibilidade
-                if (lower.matches(".*(acessibilidade|tema|daltonismo|tamanho de texto|fonte|som|audio|protanomalia|deuteranomalia|baixa visao|modo escuro|dark mode).*"))
+                if (lower.matches(
+                                ".*(acessibilidade|tema|daltonismo|tamanho de texto|fonte|som|audio|protanomalia|deuteranomalia|baixa visao|modo escuro|dark mode).*"))
                         return QuickActionsConfig.ACCESSIBILITY_ACTIONS;
 
                 // Perfil, avatar e conta
-                if (lower.matches(".*(perfil|avatar|resultado|jogador|logout|sair da conta|boneco|criar avatar|editar avatar|trocar jogador|ver resultados).*"))
+                if (lower.matches(
+                                ".*(perfil|avatar|resultado|jogador|logout|sair da conta|boneco|criar avatar|editar avatar|trocar jogador|ver resultados).*"))
                         return QuickActionsConfig.PROFILE_ACTIONS;
 
                 // Problemas tecnicos e suporte
-                if (lower.matches(".*(erro|bug|nao funciona|travou|nao abre|nao carrega|problema|suporte|reportar|falha|nao loga|nao consigo entrar).*"))
+                if (lower.matches(
+                                ".*(erro|bug|nao funciona|travou|nao abre|nao carrega|problema|suporte|reportar|falha|nao loga|nao consigo entrar).*"))
                         return QuickActionsConfig.TECH_SUPPORT_ACTIONS;
 
                 // Plataforma, acesso e download
-                if (lower.matches(".*(ios|iphone|android|download|instalar|versao web|link|site|navegador|url|endereco web).*"))
+                if (lower.matches(
+                                ".*(ios|iphone|android|download|instalar|versao web|link|site|navegador|url|endereco web).*"))
                         return QuickActionsConfig.PLATFORM_ACTIONS;
 
                 // Mascote Rigel
@@ -236,7 +256,8 @@ public class SDREngine {
                         return QuickActionsConfig.MASCOT_ACTIONS;
 
                 // Projeto, equipe e tecnologias
-                if (lower.matches(".*(integrante|equipe|desenvolvedor|fatec|ods|projeto|tecnologia|scrum|kanban|github|arquitetura|backend|frontend|mysql|rabbitmq).*"))
+                if (lower.matches(
+                                ".*(integrante|equipe|desenvolvedor|fatec|ods|projeto|tecnologia|scrum|kanban|github|arquitetura|backend|frontend|mysql|rabbitmq).*"))
                         return QuickActionsConfig.ABOUT_PROJECT_ACTIONS;
 
                 // Cortesia e encerramento
@@ -244,11 +265,13 @@ public class SDREngine {
                         return QuickActionsConfig.FAREWELL_ACTIONS;
 
                 // Usuário perdido ou primeira vez
-                if (lower.matches(".*(perdido|nao sei mexer|como comeca|primeira vez|por onde comeco|nao sei usar|me ajuda a comecar).*"))
+                if (lower.matches(
+                                ".*(perdido|nao sei mexer|como comeca|primeira vez|por onde comeco|nao sei usar|me ajuda a comecar).*"))
                         return QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS;
 
                 // Responsável preocupado com aprendizado
-                if (lower.matches(".*(nao aprende|nao evolui|nao desenvolve|nao gosta de estudar|nao presta atencao|sem interesse).*"))
+                if (lower.matches(
+                                ".*(nao aprende|nao evolui|nao desenvolve|nao gosta de estudar|nao presta atencao|sem interesse).*"))
                         return QuickActionsConfig.QUALIFY_PAIN_ACTIONS;
 
                 // Fallback genérico

@@ -824,7 +824,16 @@ public class KnowledgeBaseService {
                         new Entry(
                                         "No publico infantil, personagens tornam interfaces mais receptivas. Isso reduz a sensacao de formalidade e aproxima a crianca da experiencia digital.",
                                         "deixa amigavel", "app mais amigavel", "mais divertido pras criancas",
-                                        "interface infantil", "visual para crianca"));
+                                        "interface infantil", "visual para crianca"),
+                        // ── Navegação / Outra dúvida ─────────────────────────────────────
+                        new Entry(
+                                        "Claro! Sobre o que voce gostaria de saber?\n\n" +
+                                                        "Posso te ajudar com jogos, acessibilidade, perfil,\n" +
+                                                        "cadastro, suporte e muito mais!",
+                                        "tenho outra duvida", "outra duvida", "outra pergunta",
+                                        "quero perguntar outra coisa", "tenho mais duvidas",
+                                        "me tira outra duvida", "tenho outra questao",
+                                        "posso perguntar outra coisa", "mais uma duvida"));
 
         private static final List<String> OFFENSIVE_KEYWORDS = Arrays.asList(
                         "idiota", "burro", "inutil", "lixo", "merda", "bosta",
