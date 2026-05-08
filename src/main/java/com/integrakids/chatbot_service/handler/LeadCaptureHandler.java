@@ -38,7 +38,7 @@ public class LeadCaptureHandler {
                 String empresa = input.trim();
                 if (empresa.length() < 2) {
                     return new SDRResponse(
-                            "Pode me informar o nome da empresa?",
+                            "Voce e pai/responsavel, professor ou profissional de saude?",
                             ConversationPhase.LEAD_CAPTURE_COMPANY,null, null, BotEmotion.SEARCHING);
                 }
                 LeadInfo update = new LeadInfo();
@@ -81,11 +81,12 @@ public class LeadCaptureHandler {
                         + "Perfil: " + lead.empresa + "\n"
                         + "E-mail: " + lead.email + "\n"
                         + "Telefone: " + input.trim() + "\n\n"
-                        + "Um especialista entrará em contato em breve!\n\n";
+                        + "Um especialista entrará em contato em breve!\n\n"
+                        +  "Posso ajudá-lo em mais alguma coisa?\n\n";
                 return new SDRResponse(
                         resumo,
                         ConversationPhase.LEAD_CAPTURED,
-                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS,
+                        QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS,
                         update, BotEmotion.SATISFIED);
             }
 

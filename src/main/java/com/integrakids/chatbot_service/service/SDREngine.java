@@ -1,9 +1,12 @@
 package com.integrakids.chatbot_service.service;
 
+import java.util.List;
+
 import com.integrakids.chatbot_service.handler.LeadCaptureHandler;
 import com.integrakids.chatbot_service.model.BotEmotion;
 import com.integrakids.chatbot_service.model.ConversationPhase;
 import com.integrakids.chatbot_service.model.LeadInfo;
+import com.integrakids.chatbot_service.model.QuickAction;
 import com.integrakids.chatbot_service.model.SDRResponse;
 import com.integrakids.chatbot_service.util.TextNormalizer;
 
@@ -67,7 +70,8 @@ public class SDREngine {
                         ConversationPhase next = (phase == ConversationPhase.LEAD_CAPTURED)
                                         ? ConversationPhase.LEAD_CAPTURED
                                         : ConversationPhase.EXPLORING;
-                        return new SDRResponse(kbResult, next, null, null, BotEmotion.NEUTRAL);
+                        List<QuickAction> actions = resolveQuickActions(lower);
+                        return new SDRResponse(kbResult, next, actions, null, BotEmotion.NEUTRAL);
                 }
 
                 // ── 5. Saudação ──────────────────────────────────────────────────
@@ -95,7 +99,7 @@ public class SDREngine {
                                                         "Perfeito, " + lead.nome
                                                                         + "! Nosso especialista liga em breve.",
                                                         ConversationPhase.LEAD_CAPTURED,
-                                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS,null,BotEmotion.EXCITED);
+                                                        QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS,null,BotEmotion.EXCITED);
                                 }
                                 return new SDRResponse(
                                                 "Perfeito! Qual e o seu nome completo?",
@@ -202,5 +206,52 @@ public class SDREngine {
                                 "Me desculpe, mas acho que não compreendi o que você deseja.\n\nMe conta mais sobre o que voce precisa!\n\n" ,          
                                 next,
                                 QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.CONFUSED);
+        }
+
+        // ── Resolve QuickActions pelo tema da pergunta ───────────────────
+        private static List<QuickAction> resolveQuickActions(String lower) {
+
+                // Jogos e atividades
+                if (lower.matches(".*(jogo|memoria|numero|letra|cor|atividade|como jogar|instrucao|vogal|par de carta|ordem crescente).*"))
+                        return QuickActionsConfig.GAMES_ACTIONS;
+
+                // Acessibilidade
+                if (lower.matches(".*(acessibilidade|tema|daltonismo|tamanho de texto|fonte|som|audio|protanomalia|deuteranomalia|baixa visao|modo escuro|dark mode).*"))
+                        return QuickActionsConfig.ACCESSIBILITY_ACTIONS;
+
+                // Perfil, avatar e conta
+                if (lower.matches(".*(perfil|avatar|resultado|jogador|logout|sair da conta|boneco|criar avatar|editar avatar|trocar jogador|ver resultados).*"))
+                        return QuickActionsConfig.PROFILE_ACTIONS;
+
+                // Problemas tecnicos e suporte
+                if (lower.matches(".*(erro|bug|nao funciona|travou|nao abre|nao carrega|problema|suporte|reportar|falha|nao loga|nao consigo entrar).*"))
+                        return QuickActionsConfig.TECH_SUPPORT_ACTIONS;
+
+                // Plataforma, acesso e download
+                if (lower.matches(".*(ios|iphone|android|download|instalar|versao web|link|site|navegador|url|endereco web).*"))
+                        return QuickActionsConfig.PLATFORM_ACTIONS;
+
+                // Mascote Rigel
+                if (lower.matches(".*(mascote|rigel|personagem|boneco do app|identidade visual|interface infantil).*"))
+                        return QuickActionsConfig.MASCOT_ACTIONS;
+
+                // Projeto, equipe e tecnologias
+                if (lower.matches(".*(integrante|equipe|desenvolvedor|fatec|ods|projeto|tecnologia|scrum|kanban|github|arquitetura|backend|frontend|mysql|rabbitmq).*"))
+                        return QuickActionsConfig.ABOUT_PROJECT_ACTIONS;
+
+                // Cortesia e encerramento
+                if (lower.matches(".*(obrigado|valeu|legal|otimo|era so|tchau|ate mais|ate logo|foi isso|e so isso).*"))
+                        return QuickActionsConfig.FAREWELL_ACTIONS;
+
+                // Usuário perdido ou primeira vez
+                if (lower.matches(".*(perdido|nao sei mexer|como comeca|primeira vez|por onde comeco|nao sei usar|me ajuda a comecar).*"))
+                        return QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS;
+
+                // Responsável preocupado com aprendizado
+                if (lower.matches(".*(nao aprende|nao evolui|nao desenvolve|nao gosta de estudar|nao presta atencao|sem interesse).*"))
+                        return QuickActionsConfig.QUALIFY_PAIN_ACTIONS;
+
+                // Fallback genérico
+                return QuickActionsConfig.CONTINUE_EXPLORING_ACTIONS;
         }
 }
