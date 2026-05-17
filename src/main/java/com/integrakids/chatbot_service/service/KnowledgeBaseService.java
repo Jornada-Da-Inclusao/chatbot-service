@@ -638,6 +638,77 @@ public class KnowledgeBaseService {
                                         "como sair", "como fazer logout", "encerrar sessao",
                                         "fechar conta", "sair do app"),
 
+                        // ── FAQ: Sobre o assistente (auto-referência) ────────────────────
+                        new Entry(
+                                        "Oi! Eu sou o Rigel, o assistente virtual do IntegraKids! 😊\\n\\n" +
+                                                        "Fui criado pela equipe do projeto Jornada da Inclusao\\n" +
+                                                        "para ajudar responsaveis, professores e usuarios\\n" +
+                                                        "com duvidas e orientacoes sobre a plataforma.\\n\\n" +
+                                                        "Estou disponivel 24 horas por dia, tanto na versao web\\n" +
+                                                        "quanto no aplicativo mobile. Como posso te ajudar?",
+                                        "quem e voce", "o que voce e", "voce e um robo", "e um bot",
+                                        "voce e humano", "voce e uma ia", "o que e isso aqui",
+                                        "ta falando com maquina", "ta falando com robo",
+                                        "e uma maquina", "isso e automatico", "quem responde aqui",
+                                        "robo", "voce e robo", "e robo", "quem e rigel",
+                                        "o que e rigel", "rigel e o que", "rigel e quem"),
+
+                        new Entry(
+                                        "Meu nome e Rigel! 😊\\n\\n" +
+                                                        "Sou o assistente virtual do IntegraKids, desenvolvido\\n" +
+                                                        "pela equipe do projeto Jornada da Inclusao.\\n\\n" +
+                                                        "O nome foi inspirado em Rigel, a estrela mais brilhante\\n" +
+                                                        "da constelacao de Orion — assim como o mascote do app,\\n" +
+                                                        "que tambem se chama Rigel!",
+                                        "qual seu nome", "como voce se chama", "como se chama", "tem nome",
+                                        "qual e o seu nome", "voce tem nome", "como o bot se chama",
+                                        "nome do bot", "nome do assistente", "como chama o assistente",
+                                        "voce tem nome proprio", "qual o nome do chatbot"),
+
+                        new Entry(
+                                        "Eu consigo responder duvidas sobre:\\n\\n" +
+                                                        "- O app e a plataforma IntegraKids\\n" +
+                                                        "- Jogos e atividades educativas\\n" +
+                                                        "- Acessibilidade e configuracoes\\n" +
+                                                        "- Perfil, cadastro e login\\n" +
+                                                        "- Resultados e desempenho das criancas\\n" +
+                                                        "- O projeto Jornada da Inclusao\\n\\n" +
+                                                        "Para temas fora do IntegraKids, posso nao ter a resposta,\\n" +
+                                                        "mas sempre tento ajudar da melhor forma possivel!",
+                                        "o que voce sabe", "o que voce faz", "para que voce serve",
+                                        "como voce pode ajudar", "voce sabe responder", "voce entende tudo",
+                                        "no que voce ajuda", "voce e util", "capacidades do bot",
+                                        "o que o assistente faz", "o que o bot sabe", "o que o chatbot faz"),
+
+                        new Entry(
+                                        "Eu nao aprendo com as conversas em tempo real —\\n" +
+                                                        "minhas respostas sao baseadas em uma base de conhecimento\\n" +
+                                                        "construida pela equipe do IntegraKids.\\n\\n" +
+                                                        "Se eu nao reconhecer uma pergunta, aviso\\n" +
+                                                        "e sugiro outras formas de ajuda.",
+                                        "voce aprende", "voce evolui", "voce memoriza", "voce lembra",
+                                        "como voce funciona por dentro", "voce usa ia", "voce usa gpt",
+                                        "voce e chatgpt", "usa inteligencia artificial", "tem machine learning",
+                                        "como o bot aprende", "como o assistente foi treinado"),
+
+                        new Entry(
+                                        "Eu nao tenho acesso aos dados pessoais de quem conversa comigo.\\n" +
+                                                        "As conversas nao sao armazenadas entre sessoes —\\n" +
+                                                        "cada atendimento comeca do zero, sem historico anterior.",
+                                        "voce guarda o que falo", "voce salva conversa", "voce me espiona",
+                                        "voce tem meus dados", "voce sabe quem eu sou",
+                                        "voce acessa minha conta", "bot tem acesso a conta",
+                                        "chatbot ve minha conta", "bot salva dados"),
+
+                        new Entry(
+                                        "Tenho limitacoes: funciono melhor com perguntas\\n" +
+                                                        "relacionadas ao IntegraKids.\\n\\n" +
+                                                        "Assuntos fora do escopo da plataforma podem nao ser respondidos\\n" +
+                                                        "com precisao. Nesse caso, indico outras formas de suporte.",
+                                        "voce nao sabe de tudo", "voce erra", "voce nao entende",
+                                        "voce tem limitacao", "nao entendeu nada", "resposta errada",
+                                        "voce errou", "resposta incorreta"),
+
                         // ── Saudacoes ────────────────────────────────────────────────────
                         new Entry(
                                         "Ola! Seja bem-vindo ao IntegraKids!\n" +
@@ -738,7 +809,7 @@ public class KnowledgeBaseService {
 
                         new Entry(
                                         "Oiii 😊 Eu sou o assistente do IntegraKids! Posso conversar e te ajudar a encontrar jogos legais.",
-                                        "oi robozinho", "oi bot", "amiguinho", "qual seu nome",
+                                        "oi robozinho", "oi bot", "amiguinho",
                                         "quem e voce robo"),
 
                         new Entry(
@@ -791,7 +862,7 @@ public class KnowledgeBaseService {
 
                         new Entry(
                                         "O mascote do projeto se chama Rigel 😊 O nome foi escolhido por um dos desenvolvedores, que gosta muito de temas ligados ao espaco e astronomia. Como o personagem e representado como uma crianca em um foguete, a referencia combinou perfeitamente com sua proposta visual. Rigel e uma das estrelas mais conhecidas da constelacao de Orion e tambem a mais brilhante desse conjunto estelar, simbolizando luz, destaque, descoberta e exploracao. Esses valores se conectam diretamente com a proposta do IntegraKids de iluminar caminhos no aprendizado infantil.",
-                                        "por que rigel", "quem e rigel", "significado de rigel",
+                                        "por que rigel", "significado de rigel",
                                         "nome rigel", "por que esse nome", "origem do nome rigel",
                                         "de onde veio rigel", "o que significa rigel", "rigel estrela",
                                         "por que o mascote chama rigel"),

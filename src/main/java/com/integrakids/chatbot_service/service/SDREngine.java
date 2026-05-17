@@ -213,6 +213,10 @@ public class SDREngine {
         // ── Infere a emoção do bot com base no tema da pergunta ──────────
         private static BotEmotion resolveEmotionFromQuery(String lower) {
 
+                // Perguntas sobre o próprio assistente — feliz em se apresentar
+                if (lower.matches(".*(quem e voce|o que voce e|voce e um robo|qual seu nome|como voce se chama|o que voce faz|para que voce serve|como voce pode ajudar|voce aprende|voce guarda|voce tem limitacao|voce sabe responder|como o bot funciona|o que o assistente faz).*"))
+                        return BotEmotion.HAPPY;
+
                 // Jogos — animado, é a funcionalidade principal do app
                 if (lower.matches(".*(jogo|atividade|memoria|numeros|letras|cores|vogais|alfabetiz|gamif).*"))
                         return BotEmotion.EXCITED;
