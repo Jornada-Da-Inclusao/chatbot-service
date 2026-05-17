@@ -10,17 +10,15 @@ public enum BotEmotion {
 
     // esses de baixo só vao ser usados se tiver um contexto para eles (alguns certamente serão inuteis)
 
-    LISTENING, // esse vai para a função de pesquisa por voz (vai haver variacoes desse comportamento)
-    ANGER, // caso o user erre algo
-    LAUGHING, // talvez uma tratativa q entenda algo engraçado (chance minima de rolar)
-    SEARCHING, // vai servir para coleta de dados
-    CONFUSED, // caso ele n entenda, facil
-    INTELECT, // quando for dar algum conselho
-    SATISFIED, // consegui resolver a duvida, GG
-    INDIFFERENT, // ...n pensei onde usar isso
-    EMBARRASED, // alguma tratativa q reconheça elogios
-    SLEEPING, // quando o backend dele estiver fora do ar
-    CHAD,
-    SURPRISED // ... outro q n sei onde usar
+    LISTENING,   // pesquisa por voz / escutando o usuário
+    LAUGHING,    // tratativa que entenda algo engraçado
+    SEARCHING,   // coleta de dados
+    CONFUSED,    // não entendeu a mensagem
+    INTELECT,    // dando um conselho ou orientação qualificada
+    SATISFIED,   // resolveu a dúvida com sucesso
+    INDIFFERENT, // sem contexto definido
+    EMBARRASSED, // reconheceu um elogio
+    SLEEPING,    // backend fora do ar
+    SURPRISED    // reação inesperada
 
 }

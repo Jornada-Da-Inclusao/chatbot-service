@@ -72,7 +72,7 @@ public class LeadCaptureHandler {
                 if (apenasDigitos.length() < 10) {
                     return new SDRResponse(
                             "O telefone precisa ter pelo menos 10 digitos com DDD.",
-                            ConversationPhase.LEAD_CAPTURE_PHONE,null,null,BotEmotion.ANGER);
+                            ConversationPhase.LEAD_CAPTURE_PHONE,null,null,BotEmotion.INDIFFERENT);
                 }
                 LeadInfo update = new LeadInfo();
                 update.telefone = input.trim();

@@ -39,7 +39,7 @@ public class SDREngine {
                                                         + lead.email + " em breve.\n\n" +
                                                         "Posso te ajudar com mais alguma duvida?",
                                         ConversationPhase.LEAD_CAPTURED,
-                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.CHAD);
+                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.EXCITED);
                 }
 
                 // ── 3. Intenção de contato (lead ainda não capturado) ────────────
@@ -62,7 +62,7 @@ public class SDREngine {
                                                                         + "! Nosso especialista liga em breve.",
                                                         ConversationPhase.LEAD_CAPTURED,
                                                         QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null,
-                                                        BotEmotion.CHAD);
+                                                        BotEmotion.EXCITED);
                                 }
                                 return new SDRResponse(
                                                 "Otimo! Para agendar um diagnostico gratuito, qual e o seu nome completo?",
@@ -72,7 +72,7 @@ public class SDREngine {
                                         ? ConversationPhase.LEAD_CAPTURED
                                         : ConversationPhase.EXPLORING;
                         List<QuickAction> actions = resolveQuickActions(lower);
-                        return new SDRResponse(kbResult, next, actions, null, BotEmotion.NEUTRAL);
+                        return new SDRResponse(kbResult, next, actions, null, resolveEmotionFromQuery(lower));
                 }
 
                 // ── 5. Saudação ──────────────────────────────────────────────────
@@ -81,7 +81,7 @@ public class SDREngine {
                                         "Ola! Que bom ter voce aqui!\n\n" +
                                                         "Sou o assistente do IntegraKids. Como posso te ajudar hoje?",
                                         ConversationPhase.EXPLORING,
-                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.NEUTRAL);
+                                        QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.HAPPY);
                 }
 
                 // ── 6. Agradecimento ─────────────────────────────────────────────
@@ -208,6 +208,65 @@ public class SDREngine {
                                 "Me desculpe, mas acho que não compreendi o que você deseja.\n\nMe conta mais sobre o que voce precisa!\n\n",
                                 next,
                                 QuickActionsConfig.INTEGRAKIDS_WELCOME_ACTIONS, null, BotEmotion.CONFUSED);
+        }
+
+        // ── Infere a emoção do bot com base no tema da pergunta ──────────
+        private static BotEmotion resolveEmotionFromQuery(String lower) {
+
+                // Jogos — animado, é a funcionalidade principal do app
+                if (lower.matches(".*(jogo|atividade|memoria|numeros|letras|cores|vogais|alfabetiz|gamif).*"))
+                        return BotEmotion.EXCITED;
+
+                // Elogios ou reações positivas do usuário — envergonhado/feliz
+                if (lower.matches(".*(legal|massa|show|bacana|incrivel|top|perfeito|excelente|muito bom|que bom|que otimo).*"))
+                        return BotEmotion.EMBARRASSED;
+
+                // Cortesia / encerramento — feliz
+                if (lower.matches(".*(obrigad|valeu|brigad|agradec|tchau|ate mais|ate logo|foi isso|e so isso).*"))
+                        return BotEmotion.HAPPY;
+
+                // OK / confirmação — satisfeito
+                if (lower.matches(".*(ok|okay|certo|entendido|entendi|compreendi|ta bom|ta certo|beleza|blz|tudo bem|tudo certo).*"))
+                        return BotEmotion.SATISFIED;
+
+                // Acessibilidade / personalização — pensativo, mostrando cuidado
+                if (lower.matches(".*(acessibilidade|daltonismo|tamanho de texto|fonte|som|audio|tema|dark mode|modo escuro|baixa visao|protanomalia|deuteranomalia).*"))
+                        return BotEmotion.THINKING;
+
+                // TEA / necessidades especiais — empático, atencioso
+                if (lower.matches(".*(tea|autis|espectro|inclusao|necessidade especial|dificuldade).*"))
+                        return BotEmotion.LISTENING;
+
+                // Suporte técnico / erros — preocupado
+                if (lower.matches(".*(erro|bug|nao funciona|travou|nao abre|nao carrega|problema|suporte|falha|nao loga).*"))
+                        return BotEmotion.SAD;
+
+                // Plataforma / download / iOS / Android — informativo com entusiasmo
+                if (lower.matches(".*(ios|iphone|android|download|instalar|versao web|link|site|navegador).*"))
+                        return BotEmotion.THINKING;
+
+                // Projeto / equipe / tecnologia — orgulhoso, interessante
+                if (lower.matches(".*(integrante|equipe|desenvolvedor|fatec|ods|projeto|tecnologia|scrum|arquitetura|backend|frontend).*"))
+                        return BotEmotion.EXCITED;
+
+                // Mascote / identidade visual — animado
+                if (lower.matches(".*(mascote|rigel|personagem|boneco).*"))
+                        return BotEmotion.HAPPY;
+
+                // Progresso / resultados — satisfeito
+                if (lower.matches(".*(progresso|resultado|desempenho|relatorio|evolucao).*"))
+                        return BotEmotion.SATISFIED;
+
+                // Segurança / privacidade / conta — pensativo, sério
+                if (lower.matches(".*(seguranca|privacidade|dados|senha|excluir conta|login|cadastro).*"))
+                        return BotEmotion.THINKING;
+
+                // Diagnóstico / especialista — animado
+                if (lower.matches(".*(diagnostico|especialista|gratuito|contato|agendar).*"))
+                        return BotEmotion.EXCITED;
+
+                // Default: neutro apenas quando realmente não há contexto
+                return BotEmotion.NEUTRAL;
         }
 
         // ── Resolve QuickActions pelo tema da pergunta ───────────────────
