@@ -640,11 +640,11 @@ public class KnowledgeBaseService {
 
                         // ── FAQ: Sobre o assistente (auto-referência) ────────────────────
                         new Entry(
-                                        "Oi! Eu sou o Rigel, o assistente virtual do IntegraKids! 😊\\n\\n" +
-                                                        "Fui criado pela equipe do projeto Jornada da Inclusao\\n" +
-                                                        "para ajudar responsaveis, professores e usuarios\\n" +
-                                                        "com duvidas e orientacoes sobre a plataforma.\\n\\n" +
-                                                        "Estou disponivel 24 horas por dia, tanto na versao web\\n" +
+                                        "Oi! Eu sou o Rigel, o assistente virtual do IntegraKids! 😊\n\n" +
+                                                        "Fui criado pela equipe do projeto Jornada da Inclusao\n" +
+                                                        "para ajudar responsaveis, professores e usuarios\n" +
+                                                        "com duvidas e orientacoes sobre a plataforma.\n\n" +
+                                                        "Estou disponivel 24 horas por dia, tanto na versao web\n" +
                                                         "quanto no aplicativo mobile. Como posso te ajudar?",
                                         "quem e voce", "o que voce e", "voce e um robo", "e um bot",
                                         "voce e humano", "voce e uma ia", "o que e isso aqui",
@@ -654,11 +654,11 @@ public class KnowledgeBaseService {
                                         "o que e rigel", "rigel e o que", "rigel e quem"),
 
                         new Entry(
-                                        "Meu nome e Rigel! 😊\\n\\n" +
-                                                        "Sou o assistente virtual do IntegraKids, desenvolvido\\n" +
-                                                        "pela equipe do projeto Jornada da Inclusao.\\n\\n" +
-                                                        "O nome foi inspirado em Rigel, a estrela mais brilhante\\n" +
-                                                        "da constelacao de Orion — assim como o mascote do app,\\n" +
+                                        "Meu nome e Rigel! 😊\n\n" +
+                                                        "Sou o assistente virtual do IntegraKids, desenvolvido\n" +
+                                                        "pela equipe do projeto Jornada da Inclusao.\n\n" +
+                                                        "O nome foi inspirado em Rigel, a estrela mais brilhante\n" +
+                                                        "da constelacao de Orion — assim como o mascote do app,\n" +
                                                         "que tambem se chama Rigel!",
                                         "qual seu nome", "como voce se chama", "como se chama", "tem nome",
                                         "qual e o seu nome", "voce tem nome", "como o bot se chama",
@@ -666,14 +666,14 @@ public class KnowledgeBaseService {
                                         "voce tem nome proprio", "qual o nome do chatbot"),
 
                         new Entry(
-                                        "Eu consigo responder duvidas sobre:\\n\\n" +
-                                                        "- O app e a plataforma IntegraKids\\n" +
-                                                        "- Jogos e atividades educativas\\n" +
-                                                        "- Acessibilidade e configuracoes\\n" +
-                                                        "- Perfil, cadastro e login\\n" +
-                                                        "- Resultados e desempenho das criancas\\n" +
-                                                        "- O projeto Jornada da Inclusao\\n\\n" +
-                                                        "Para temas fora do IntegraKids, posso nao ter a resposta,\\n" +
+                                        "Eu consigo responder duvidas sobre:\n\n" +
+                                                        "- O app e a plataforma IntegraKids\n" +
+                                                        "- Jogos e atividades educativas\n" +
+                                                        "- Acessibilidade e configuracoes\n" +
+                                                        "- Perfil, cadastro e login\n" +
+                                                        "- Resultados e desempenho das criancas\n" +
+                                                        "- O projeto Jornada da Inclusao\n\n" +
+                                                        "Para temas fora do IntegraKids, posso nao ter a resposta,\n" +
                                                         "mas sempre tento ajudar da melhor forma possivel!",
                                         "o que voce sabe", "o que voce faz", "para que voce serve",
                                         "como voce pode ajudar", "voce sabe responder", "voce entende tudo",
@@ -681,10 +681,10 @@ public class KnowledgeBaseService {
                                         "o que o assistente faz", "o que o bot sabe", "o que o chatbot faz"),
 
                         new Entry(
-                                        "Eu nao aprendo com as conversas em tempo real —\\n" +
-                                                        "minhas respostas sao baseadas em uma base de conhecimento\\n" +
-                                                        "construida pela equipe do IntegraKids.\\n\\n" +
-                                                        "Se eu nao reconhecer uma pergunta, aviso\\n" +
+                                        "Eu nao aprendo com as conversas em tempo real —\n" +
+                                                        "minhas respostas sao baseadas em uma base de conhecimento\n" +
+                                                        "construida pela equipe do IntegraKids.\n\n" +
+                                                        "Se eu nao reconhecer uma pergunta, aviso\n" +
                                                         "e sugiro outras formas de ajuda.",
                                         "voce aprende", "voce evolui", "voce memoriza", "voce lembra",
                                         "como voce funciona por dentro", "voce usa ia", "voce usa gpt",
@@ -692,8 +692,8 @@ public class KnowledgeBaseService {
                                         "como o bot aprende", "como o assistente foi treinado"),
 
                         new Entry(
-                                        "Eu nao tenho acesso aos dados pessoais de quem conversa comigo.\\n" +
-                                                        "As conversas nao sao armazenadas entre sessoes —\\n" +
+                                        "Eu nao tenho acesso aos dados pessoais de quem conversa comigo.\n" +
+                                                        "As conversas nao sao armazenadas entre sessoes —\n" +
                                                         "cada atendimento comeca do zero, sem historico anterior.",
                                         "voce guarda o que falo", "voce salva conversa", "voce me espiona",
                                         "voce tem meus dados", "voce sabe quem eu sou",
@@ -701,9 +701,9 @@ public class KnowledgeBaseService {
                                         "chatbot ve minha conta", "bot salva dados"),
 
                         new Entry(
-                                        "Tenho limitacoes: funciono melhor com perguntas\\n" +
-                                                        "relacionadas ao IntegraKids.\\n\\n" +
-                                                        "Assuntos fora do escopo da plataforma podem nao ser respondidos\\n" +
+                                        "Tenho limitacoes: funciono melhor com perguntas\n" +
+                                                        "relacionadas ao IntegraKids.\n\n" +
+                                                        "Assuntos fora do escopo da plataforma podem nao ser respondidos\n" +
                                                         "com precisao. Nesse caso, indico outras formas de suporte.",
                                         "voce nao sabe de tudo", "voce erra", "voce nao entende",
                                         "voce tem limitacao", "nao entendeu nada", "resposta errada",
